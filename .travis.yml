@@ -29,9 +29,15 @@ jobs:
     - name: 'Latest Puppet 5.x (allowed to fail)'
 
   include:
-    - stage:  validation
-      name:   Rubocop
-      script: bundle exec rake test:rubocop
+    ###  Testing on Travis CI is indefinitely disabled
+    ###
+    ###  See:
+    ###    * https://blog.travis-ci.com/2020-11-02-travis-ci-new-billing
+    ###    * https://simp-project.atlassian.net/browse/SIMP-8703
+    ###
+    ###    - stage:  validation
+    ###      name:   Rubocop
+    ###      script: bundle exec rake test:rubocop
 
 #    - stage: deploy
 #      script:
